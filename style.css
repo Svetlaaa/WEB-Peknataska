@@ -1,0 +1,171 @@
+/*---------------------obecné ---------------*/
+body{
+    font-family: 'Nunito Sans', sans-serif; 
+    font-weight: 100;
+    color: black;
+    background: linear-gradient(0deg, #ccff66 0%, rgba(0,0,0,0) 100%);
+    }
+
+/* header{
+ margin-left:100px;
+    }*/
+
+/*.logo {
+    width: 25%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    }*/
+    
+.pozadi {
+    background-image: url(obrazky/pozadi2.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 150px 50px;
+    margin-left: 100px;
+    margin-right: 120px;
+    width: 750px;
+}
+
+h2{
+    margin-left: 8%;  
+    color: gray;
+}
+
+/*---------------- MENU ---------------*/
+.menuvpravo{
+    background-color:whitesmoke;
+    list-style: none;
+    font-weight: 400;
+    margin-bottom: 0;
+    margin-top: 0;
+    padding: 20px;
+    width: 850px;
+    margin-left: 100px;
+    overflow: hidden;
+   /* position: relative;*/
+}
+
+.menuvpravo li{
+    display:inline-block;
+    padding-left: 10px;
+    float: right;
+}
+
+.menuvpravo a{
+    text-decoration: none;
+    /*text-align: center;*/
+    color: #88cc00;
+   padding: 50px 15px;
+    font-weight: bold;
+    font-size: large;
+}
+
+.menupokus a:hover,
+.menupokus a:focus,
+.menupokus a:active {
+    background-color:white;
+    text-shadow: 2px 1px grey 50%;
+}
+
+.menupokus{
+    background-color:whitesmoke;
+    list-style: none;
+    font-weight: 400;
+    margin-bottom: 0;
+    margin-top: 0;
+    padding: 20px;
+    width: 850px;
+    margin-left: 100px;
+    overflow: hidden;
+}
+
+.menupokus img{
+    width: 20%;
+    top: 0;
+    left: 0;
+}
+
+/*.menuvpravo li{
+    display:inline-block;
+    padding-left: 10px;
+    float: left;
+}*/
+
+/*---------------------sekce OBECNĚ ---------------*/
+section{
+ 
+    padding: 0 15%;
+    color: gray;
+   }
+
+
+/*---------------------sekce o mě ---------------*/
+.omne {
+   background: linear-gradient(0deg, #ccff66 0%, rgba(0,0,0,0) 100%);
+ /* padding: 15%;*/
+  color: grey
+  }
+
+.omne h2{
+margin-right: 50px;
+text-align: center;
+}
+
+.omne p{
+margin-left: 50px;
+  }
+
+.omne img{
+    width: 30%;
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/*---------------------sekce výrobky ---------------*/
+
+/*---------------------sekce fotogalerie ---------------*/
+
+/*---------------------sekce Blog ---------------*/
+
+
+/*---------------------sekce kontakt ---------------*/
+.kontakt{
+margin-left: 10%;
+   }
+
+.h2 kontakt{
+    /*\margin-left: 50%;  /*neví proč to tady nereaguje,jdu spt*/
+}
+
+.kontejner {
+ display: flex;
+ /*justify-content: space-between;*/
+}
+
+.mojefoto {
+    width: 40%;
+    border-radius: 20%;
+/*    margin-right: 80px;  */
+}
+
+.kontaktniinfo{
+margin-left: -5%;
+font-weight: 600;
+font-size: 20px;
+}
+
+
+/*---------------- patička ---------------*/
+footer{
+border: 2px solid whitesmoke;
+text-align: center;
+background-color: #f5f5f5;
+color: #88cc00;
+width: 850px;
+margin-left: 200px;
+font-weight: bold;
+
+ }
