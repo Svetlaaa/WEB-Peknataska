@@ -1,46 +1,79 @@
 'use strict';
 
-new Vue ({
-  el: `#app`, 
+new Vue({
+  el: `#app`,
 
-data: {
-  Vyrobky: [
-    {
-      nazev: `rouska`,
-      text:`TADY MUSIM VYMYSLET TEXT`,
-      mozneObjednat: true,
-      foto: `5rouska5`,
-      foto1: `2sovicky`,
-      foto2: `rouska3`
-    }, 
-    {
-      nazev: `taska`, 
-      text:`TADY MUSIM VYMYSLET TEXT`,
-      mozneObjednat: true,
-      foto3: `3taska`,
-      foto4: `taskyskladani`,
-      foto5: `taskaslozena`,
-    }, 
-{  
-  nazev: `klicenka`,
-  text:`TADY MUSIM VYMYSLET TEXT`,
-  mozneObjednat: true,
-  foto6: `klicenky2`,
-  foto7: `6klicenky`,
-  }, 
-  {
-    nazev: `obal na knihu`,
-    text:`TADY MUSIM VYMYSLET TEXT`,
-    mozneObjednat: true,
-    foto6: `obalkniha`,
-    foto7: `DOPLN`,
+  computed: {
+    filtrovaneVyrobky: function() {
+      if (this.filtr) {
+        return this.vyrobky.filter(f => f.typ && f.typ.includes(this.filtr))
+      }
+      return this.vyrobky
+    }
+  },
+
+  data: {
+    filtr: null,
+    vyrobky: [
+      {
+        nazev: `rouska`,
+        text: `A`,
+        typ: ["a"],
+        foto:`2sovicky.jpg`
+      },
+      {
+        nazev: `taska`,
+        text: `A+B`,
+        typ: ["a", "b"],
+        foto: `3taska.jpg`,
+         },
+      {
+        nazev: `klicenka`,
+        text: `A+B`,
+        typ: ["a", "b"],
+        foto: `kllicenky2.png`,
+         },
+      {
+        nazev: `obal na knihu`,
+        text: `A+B`,
+        typ: ["a", "b"],
+        foto: `obalkniha.png`,
+      },
+      {
+        nazev: `rouska`,
+        text: `C`,
+        typ: ["c"],
+        foto:`rouska3.png`
+      },
+      {
+        nazev: `rouska`,
+        text: `B`,
+        typ: ["b"],
+        foto:`rouska1.png`
+      },
+    ],
+  },
+
+  methods: {
+    ukazDetail(index) {
+      this.vybranyProdukt = index;
+    },
+
+    filtrovatA() {
+      this.filtr = 'a'
+    },
+
+    filtrovatB() {
+      this.filtr = 'b',
+ return text "tento text mi ukaž"
+    },
+
+    filtrovatC() {
+      this.filtr = 'c'
+    },
+
+    zrusitFiltr() {
+      this.filtr = null
+    },
   }
-], 
-    }, 
-
-    methods: {
-ukazDetail(index) {
-  this.vybranyProdukt = index;
-}
-}
   });

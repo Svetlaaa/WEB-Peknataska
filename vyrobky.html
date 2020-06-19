@@ -25,7 +25,7 @@
 
 <body>
     <div id="app">
-        <!-- Hlavička stránky -->
+        <!-- Hlavička stránky --
         <div class="header">
             <header class="pozadi">
                 <img class="logo" src="obrazky/logo22.png" alt="logo Peknataska.cz">
@@ -44,13 +44,24 @@
         <!-- sekce produkty -->
         <section class="produkty">
 
+<button v-on:click="filtrovatA">Typ A</button>
+<button v-on:click="filtrovatB">Typ B</button>
+<button v-on:click="filtrovatC">Typ C</button>
+<button v-on:click="zrusitFiltr">Zruš filtr</button>
+
+
 
             <div class="souhrn">
-                <div class:"druh" v-for="(druh, index) in Vyrobky" v-on:click="ukazDetail(index)">
-                    <div class="nazev"> {{druh.nazev}} </div>
+                <div 
+                class="druh" 
+                v-for="(druh, index) in filtrovaneVyrobky" 
+                v-on:click="ukazDetail(index)">
+
+                <div class="nazev"> {{druh.nazev}} + {{druh.foto}} </div>
+                <img class="logo" v-bind:src="`obrazky/${druh.foto}`" alt="foto" width="100px">
+
                 </div>
             </div>
-
 
         </section>
         <!--Patička -->
@@ -69,6 +80,7 @@
         <script src="js/popper.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
 
+        <script src="index.js"></script>
     </div>
 
 </body>
