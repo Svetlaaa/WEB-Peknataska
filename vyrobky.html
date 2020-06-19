@@ -44,7 +44,12 @@
         <!-- sekce produkty -->
         <section class="produkty">
 
-<button v-on:click="filtrovatA">Typ A</button>
+<button v-on:click="filtrovatA" v-on:click="zmena">Typ A</button>
+<div v-if="filtr === 'a'">
+Vy jste poměrně konzervativní typ, Vašemu typu nejvíce odpovídá
+<img class="A" src="obrazky/A_Konzervativni.png" alt="fotoA" width="250px">
+</div>
+
 <button v-on:click="filtrovatB">Typ B</button>
 <button v-on:click="filtrovatC">Typ C</button>
 <button v-on:click="zrusitFiltr">Zruš filtr</button>
@@ -76,13 +81,13 @@
         <!-- Optional JavaScript -->
         <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 
-        <script src="js/jquery-3.2.1.slim.min.js"></script>
-        <script src="js/popper.min.js"></script>
-        <script src="js/bootstrap.min.js"></script>
+        <!-- <script src="js/jquery-3.2.1.slim.min.js"></script> -->
+        <!-- <script src="js/popper.min.js"></script> -->
+        <!-- <script src="js/bootstrap.min.js"></script> -->
 
-        <script src="index.js"></script>
     </div>
 
+    <script src="index.js"></script>
 </body>
 
 </html>

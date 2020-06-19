@@ -4,7 +4,7 @@ new Vue({
   el: `#app`,
 
   computed: {
-    filtrovaneVyrobky: function() {
+    filtrovaneVyrobky: function () {
       if (this.filtr) {
         return this.vyrobky.filter(f => f.typ && f.typ.includes(this.filtr))
       }
@@ -19,20 +19,20 @@ new Vue({
         nazev: `rouska`,
         text: `A`,
         typ: ["a"],
-        foto:`2sovicky.jpg`
+        foto: `2sovicky.jpg`
       },
       {
         nazev: `taska`,
         text: `A+B`,
         typ: ["a", "b"],
         foto: `3taska.jpg`,
-         },
+      },
       {
         nazev: `klicenka`,
         text: `A+B`,
         typ: ["a", "b"],
         foto: `kllicenky2.png`,
-         },
+      },
       {
         nazev: `obal na knihu`,
         text: `A+B`,
@@ -43,13 +43,13 @@ new Vue({
         nazev: `rouska`,
         text: `C`,
         typ: ["c"],
-        foto:`rouska3.png`
+        foto: `rouska3.png`
       },
       {
         nazev: `rouska`,
         text: `B`,
         typ: ["b"],
-        foto:`rouska1.png`
+        foto: `rouska1.png`
       },
     ],
   },
@@ -64,8 +64,7 @@ new Vue({
     },
 
     filtrovatB() {
-      this.filtr = 'b',
- return text "tento text mi ukaž"
+      this.filtr = 'b'
     },
 
     filtrovatC() {
@@ -75,5 +74,5 @@ new Vue({
     zrusitFiltr() {
       this.filtr = null
     },
-  }
-  });
+  }, 
+});
