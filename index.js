@@ -29,13 +29,13 @@ new Vue({
       },
       {
         nazev: `klicenka`,
-        text: `A+B`,
-        typ: ["a", "b"],
+              text: `A`,
+        typ: ["a"],
         foto: `kllicenky2.png`,
       },
       {
         nazev: `obal na knihu`,
-        text: `A+B`,
+        text: `A`,
         typ: ["a", "b"],
         foto: `obalkniha.png`,
       },
@@ -52,6 +52,8 @@ new Vue({
         foto: `rouska1.png`
       },
     ],
+    tlacitka:false,
+
   },
 
   methods: {
@@ -61,18 +63,25 @@ new Vue({
 
     filtrovatA() {
       this.filtr = 'a'
+      this.tlacitka = false
     },
 
     filtrovatB() {
       this.filtr = 'b'
+      this.tlacitka = false
     },
 
     filtrovatC() {
       this.filtr = 'c'
+      this.tlacitka = false
     },
 
     zrusitFiltr() {
       this.filtr = null
     },
-  }, 
+    
+    ukazTlacitko(){
+      this.tlacitka = !this.tlacitka;   
+     },
+  },
 });
