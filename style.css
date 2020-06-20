@@ -3,30 +3,12 @@ body{
     font-family: 'Nunito Sans', sans-serif; 
     font-weight: 100;
     color: black;
-    background: linear-gradient(0deg, #ccff66 0%, rgba(0,0,0,0) 100%);
     }
 
-/* header{
- margin-left:100px;
-    }*/
-
-/*.logo {
-    width: 25%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    }*/
-    
-.pozadi {
-    background-image: url(obrazky/pozadi2.jpg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    padding: 150px 50px;
-    margin-left: 100px;
-    margin-right: 120px;
-    width: 750px;
-}
+    .celkovaStranka{
+        margin-left: 100px;
+        margin-right: 15%;
+    }
 
 h2{
     margin-left: 8%;  
@@ -34,64 +16,23 @@ h2{
 }
 
 /*---------------- MENU ---------------*/
-.menuvpravo{
-    background-color:whitesmoke;
-    list-style: none;
+.hlavicka {
+    border-bottom: 2px solid greenyellow;
     font-weight: 400;
+    font-weight: bolder;
+    text-align: right;
     margin-bottom: 0;
     margin-top: 0;
-    padding: 20px;
-    width: 850px;
-    margin-left: 100px;
+  
     overflow: hidden;
-   /* position: relative;*/
-}
+   }
 
-.menuvpravo li{
-    display:inline-block;
-    padding-left: 10px;
-    float: right;
-}
-
-.menuvpravo a{
-    text-decoration: none;
-    /*text-align: center;*/
-    color: #88cc00;
-   padding: 50px 15px;
-    font-weight: bold;
-    font-size: large;
-}
-
-.menupokus a:hover,
-.menupokus a:focus,
-.menupokus a:active {
-    background-color:white;
-    text-shadow: 2px 1px grey 50%;
-}
-
-.menupokus{
-    background-color:whitesmoke;
-    list-style: none;
-    font-weight: 400;
-    margin-bottom: 0;
-    margin-top: 0;
-    padding: 20px;
-    width: 850px;
-    margin-left: 100px;
-    overflow: hidden;
-}
-
-.menupokus img{
+/*.hlavicka logo{
     width: 20%;
     top: 0;
-    left: 0;
-}
-
-/*.menuvpravo li{
-    display:inline-block;
-    padding-left: 10px;
-    float: left;
+   text-align: left;
 }*/
+
 
 /*---------------------sekce OBECNĚ ---------------*/
 section{
@@ -167,5 +108,8 @@ color: #88cc00;
 width: 850px;
 margin-left: 200px;
 font-weight: bold;
+ }
 
+ .nadpis {
+font-weight: bold;
  }

@@ -24,94 +24,94 @@
 </script>
 
 <body>
-    <div id="app">
-        <!-- Hlavička stránky --
-        <div class="header">
-            <header class="pozadi">
-                <img class="logo" src="obrazky/logo22.png" alt="logo Peknataska.cz">
-            </header>
-        </div>
+    <div class="celkovaStranka">
 
         <!-- menu -->
-        <ul class="menu">
-            <li><a href="omne.html">O mně</a></li>
-            <li><a href="vyrobky.html">Výrobky/Služby</a></li>
-            <!-- <li><a href="fotogalerie.html">Fotogalerie</a></li> -->
-            <li><a href="blog.html">Blog</a></li>
-            <li><a href="kontakt.html">Kontakt</a></li>
-        </ul>
+        <header class="hlavicka">
+
+            <img class="logo" src="obrazky/logo22.png" alt="logo Peknataska.cz" width=25%>
+
+            E-mail: info@peknataska.cz <br>
+            Telefon: +420 602 131 575
+        </header>
+
+
+
+        <img src="obrazky/pozadi2.jpg" alt="pozadi" width=200px>
+
+        <!-- Hlavička stránky -->
 
         <!-- sekce produkty -->
-        <section class="produkty">
+        <div id="app">
 
-            <button v-on:click="ukazPrvniOtazku" v-if="filtr===null  && sadaOtazek===false"> POTŘEBUJI PORADIT</button>
-    <br>
-            <div v-on:click="prepniOtazku" v-if="sadaOtazek==='prvni'" >
+            <button v-on:click="ukazPrvniOtazku" v-if="filtr===null  && sadaOtazek===false"> POTŘEBUJI
+                PORADIT</button>
+            <br>
+            <div v-on:click="prepniOtazku" v-if="sadaOtazek==='prvni'">
                 <p>Vyber si, z jaké látky by sis nejpravděpodobněji koupil/a kabát:</p>
-            <button data-sada="prvni" data-body=0 > obrazek1 </button> 
-            <button data-sada="prvni" data-body=1> obrazek2 </button> 
-            <button data-sada="prvni" data-body=2> obrazek3 </button> 
+                <button data-sada="prvni" data-body=0> obrazek1 </button>
+                <button data-sada="prvni" data-body=1> obrazek2 </button>
+                <button data-sada="prvni" data-body=2> obrazek3 </button>
             </div>
-            
+
             <div v-on:click="prepniOtazku" v-if="sadaOtazek==='druha'">
                 <p>Vyber si, z jaké látky by sis nejpravděpodobněji koupil/a kalhoty nebo sukni:</p>
-                <button data-sada="druha" data-body=0 > obrazek4 </button> 
-                <button data-sada="druha" data-body=1 > obrazek5 </button> 
-                <button data-sada="druha" data-body=2 > obrazek6 </button> 
+                <button data-sada="druha" data-body=0> obrazek4 </button>
+                <button data-sada="druha" data-body=1> obrazek5 </button>
+                <button data-sada="druha" data-body=2> obrazek6 </button>
             </div>
 
             <div v-on:click="prepniOtazku" v-if="sadaOtazek==='treti'">
                 <p>Vyber si, z jaké látky by sis nejpravděpodobněji koupil/a košili, svetr nebo halenku:</p>
-                <button data-sada="treti" data-body=0 > obrazek7 </button> 
-                <button data-sada="treti" data-body=1 > obrazek8 </button> 
-                <button data-sada="treti" data-body=2 > obrazek9 </button>  
-         </div>
-         <br> 
-         
-                    
-             <div v-if="filtr==='a'">
-    Typ A
-    <br>
-    <br>
-    Vy jste poměrně konzervativní typ, Vašemu typu nejvíce odpovídá
-    méně výrazný styl oblékání, jednobarevnost v oblékání, univerzální barvy, které 
-    lze kombinovat mezi sebou i s jinými barvami. 
-    Jako základ je Váš styl velmi dobrý, právě kvůli možnosti univerzálního
-     použití. Pro zvýšení elegance a zvýraznění Vám doporučuji nebát se 
-     výraznějších doplňků. 
-     <div class=""></div><div class=""></div>
-<img class="A" src="obrazky/A_Konzervativni.png" alt="fotoA" width="250px">
+                <button data-sada="treti" data-body=0> obrazek7 </button>
+                <button data-sada="treti" data-body=1> obrazek8 </button>
+                <button data-sada="treti" data-body=2> obrazek9 </button>
+            </div>
+            <br>
 
-<img class="A" src="obrazky/A_Konzervativni_lepe.png" alt="fotoB" width="198px">
-<img class="A" src="obrazky/B.png" alt="fotoB" width="125px">
-</div>
 
-<div v-if="filtr==='b'"><br>
-</div>
+            <div v-if="filtr==='a'">
+                Typ A
+                <br>
+                <br>
+                Vy jste poměrně konzervativní typ, Vašemu typu nejvíce odpovídá
+                méně výrazný styl oblékání, jednobarevnost v oblékání, univerzální barvy, které
+                lze kombinovat mezi sebou i s jinými barvami.
+                Jako základ je Váš styl velmi dobrý, právě kvůli možnosti univerzálního
+                použití. Pro zvýšení elegance a zvýraznění Vám doporučuji nebát se
+                výraznějších doplňků.
+                <div class=""></div>
+                <div class=""></div>
+                <img class="A" src="obrazky/A_Konzervativni.png" alt="fotoA" width="250px">
 
-<div v-if="filtr==='c'"><br>
+                <img class="A" src="obrazky/A_Konzervativni_lepe.png" alt="fotoB" width="198px">
+                <img class="A" src="obrazky/B.png" alt="fotoB" width="125px">
+            </div>
 
-tady je nějaký text
-</div>
+            <div v-if="filtr==='b'"><br>
+            </div>
 
-<br>
-<button v-on:click="zrusitFiltr" v-if="filtr">Zruš {{filtr}} filtr</button>
+            <div v-if="filtr==='c'"><br>
+
+                tady je nějaký text
+            </div>
+
+            <br>
+            <button v-on:click="zrusitFiltr" v-if="filtr">Zruš {{filtr}} filtr</button>
 
 
 
             <div class="souhrn">
-                <div 
-                class="druh" 
-                v-for="(druh, index) in filtrovaneVyrobky" 
-                v-on:click="ukazDetail(index)">
+                <div class="druh" v-for="(druh, index) in filtrovaneVyrobky" v-on:click="ukazDetail(index)">
 
-                <div class="nazev"> {{druh.nazev}} + {{druh.foto}} </div>
-                <img class="logo" v-bind:src="`obrazky/${druh.foto}`" alt="foto" width="100px">
+                    <div class="nazev"> {{druh.nazev}} + {{druh.foto}} </div>
+                    <img class="logo" v-bind:src="`obrazky/${druh.foto}`" alt="foto" width="100px">
 
                 </div>
             </div>
 
-        </section>
+        </div>
+
         <!--Patička -->
 
         <footer class="footer">
@@ -121,15 +121,8 @@ tady je nějaký text
 
         </footer>
 
-        <!-- Optional JavaScript -->
-        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-
-        <!-- <script src="js/jquery-3.2.1.slim.min.js"></script> -->
-        <!-- <script src="js/popper.min.js"></script> -->
-        <!-- <script src="js/bootstrap.min.js"></script> -->
-
     </div>
-
+   
     <script src="index.js"></script>
 </body>
 
