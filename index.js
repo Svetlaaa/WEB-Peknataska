@@ -29,7 +29,7 @@ new Vue({
       },
       {
         nazev: `klicenka`,
-              text: `A`,
+        text: `A`,
         typ: ["a"],
         foto: `kllicenky2.png`,
       },
@@ -52,8 +52,9 @@ new Vue({
         foto: `rouska1.png`
       },
     ],
-    tlacitka:false,
+    sadaOtazek: false,
 
+    soucet: 0,
   },
 
   methods: {
@@ -61,27 +62,43 @@ new Vue({
       this.vybranyProdukt = index;
     },
 
-    filtrovatA() {
-      this.filtr = 'a'
-      this.tlacitka = false
-    },
-
-    filtrovatB() {
-      this.filtr = 'b'
-      this.tlacitka = false
-    },
-
-    filtrovatC() {
-      this.filtr = 'c'
-      this.tlacitka = false
-    },
-
-    zrusitFiltr() {
+        zrusitFiltr() {
       this.filtr = null
     },
-    
-    ukazTlacitko(){
-      this.tlacitka = !this.tlacitka;   
-     },
-  },
+
+    ukazPrvniOtazku() {
+      this.sadaOtazek = "prvni"
+      this.soucet = 0
+    },
+
+    prepniOtazku() {
+      const prichazimZeSady = event.target.dataset.sada
+      console.log('zmackl', prichazimZeSady)
+
+      const ukazBody = event.target.dataset.body
+      console.log('zmackl', ukazBody)
+
+
+      if ("prvni" === prichazimZeSady) {
+        this.sadaOtazek = "druha"
+        this.soucet += parseInt(ukazBody)
+      }
+      else if
+        ("druha" === prichazimZeSady) {
+        this.sadaOtazek = "treti"
+        this.soucet += parseInt(ukazBody)
+      }
+      else if
+        ("treti" === prichazimZeSady) {
+        this.sadaOtazek = false
+        this.soucet += parseInt(ukazBody)
+        
+        if (this.soucet >=5) { this.filtr='c'}
+        else if (this.soucet <= 1) { this.filtr='a'}
+        else { this.filtr='b'}
+      }
+
+
+    },
+  }
 });

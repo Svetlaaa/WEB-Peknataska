@@ -44,41 +44,54 @@
         <!-- sekce produkty -->
         <section class="produkty">
 
-            <button v-on:click="ukazTlacitko" v-if="filtr===null  && tlacitka===false"> POTŘEBUJI PORADIT</button>
-   <!-- <br>
+            <button v-on:click="ukazPrvniOtazku" v-if="filtr===null  && sadaOtazek===false"> POTŘEBUJI PORADIT</button>
+    <br>
+            <div v-on:click="prepniOtazku" v-if="sadaOtazek==='prvni'" >
+                <p>Vyber si, z jaké látky by sis nejpravděpodobněji koupil/a kabát:</p>
+            <button data-sada="prvni" data-body=0 > obrazek1 </button> 
+            <button data-sada="prvni" data-body=1> obrazek2 </button> 
+            <button data-sada="prvni" data-body=2> obrazek3 </button> 
+            </div>
             
-            <input type="radio" name="vyrobek" value="a" v-model="vyrobky"> obrazek1 
-            <input type="radio" name="vyrobek" value="b" v-model="vyrobky"> obrazek2 
-            <input type="radio" name="vyrobek" value="c" v-model="vyrobky"> obrazek3 
-            <br>
-            <input type="radio" name="vyrobek" value="a" v-model="vyrobky"> obrazek4 
-            <input type="radio" name="vyrobek" value="b" v-model="vyrobky"> obrazek5 
-            <input type="radio" name="vyrobek" value="c" v-model="vyrobky"> obrazek6 
-            <br>
-            <input type="radio" name="vyrobek" value="a" v-model="vyrobky"> obrazek7 
-            <input type="radio" name="vyrobek" value="b" v-model="vyrobky"> obrazek8 
-            <input type="radio" name="vyrobek" value="c" v-model="vyrobky"> obrazek9 
-  <div>
-    <br>  -->
+            <div v-on:click="prepniOtazku" v-if="sadaOtazek==='druha'">
+                <p>Vyber si, z jaké látky by sis nejpravděpodobněji koupil/a kalhoty nebo sukni:</p>
+                <button data-sada="druha" data-body=0 > obrazek4 </button> 
+                <button data-sada="druha" data-body=1 > obrazek5 </button> 
+                <button data-sada="druha" data-body=2 > obrazek6 </button> 
+            </div>
 
-<button v-on:click="filtrovatA" v-if="tlacitka">     
-    Typ A</button>
-    
-    <!--Typ A
+            <div v-on:click="prepniOtazku" v-if="sadaOtazek==='treti'">
+                <p>Vyber si, z jaké látky by sis nejpravděpodobněji koupil/a košili, svetr nebo halenku:</p>
+                <button data-sada="treti" data-body=0 > obrazek7 </button> 
+                <button data-sada="treti" data-body=1 > obrazek8 </button> 
+                <button data-sada="treti" data-body=2 > obrazek9 </button>  
+         </div>
+         <br> 
+         
+                    
+             <div v-if="filtr==='a'">
+    Typ A
     <br>
     <br>
     Vy jste poměrně konzervativní typ, Vašemu typu nejvíce odpovídá
-</span>
+    méně výrazný styl oblékání, jednobarevnost v oblékání, univerzální barvy, které 
+    lze kombinovat mezi sebou i s jinými barvami. 
+    Jako základ je Váš styl velmi dobrý, právě kvůli možnosti univerzálního
+     použití. Pro zvýšení elegance a zvýraznění Vám doporučuji nebát se 
+     výraznějších doplňků. 
+     <div class=""></div><div class=""></div>
 <img class="A" src="obrazky/A_Konzervativni.png" alt="fotoA" width="250px">
-</div>
--->
 
-<div><br>
-<button v-on:click="filtrovatB" v-if="tlacitka">Typ B</button>
+<img class="A" src="obrazky/A_Konzervativni_lepe.png" alt="fotoB" width="198px">
+<img class="A" src="obrazky/B.png" alt="fotoB" width="125px">
 </div>
 
-<div><br>
-<button v-on:click="filtrovatC" v-if="tlacitka">Typ C</button>
+<div v-if="filtr==='b'"><br>
+</div>
+
+<div v-if="filtr==='c'"><br>
+
+tady je nějaký text
 </div>
 
 <br>
