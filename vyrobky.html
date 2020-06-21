@@ -24,105 +24,175 @@
 </script>
 
 <body>
-    <div class="celkovaStranka">
+    <div id="app">
+        <div class="celkovaStranka">
 
-        <!-- menu -->
-        <header class="hlavicka">
-
-            <img class="logo" src="obrazky/logo22.png" alt="logo Peknataska.cz" width=25%>
-
-            E-mail: info@peknataska.cz <br>
-            Telefon: +420 602 131 575
-        </header>
+            <!-- menu -->
+            <header class="hlavicka">
 
 
+                <img class="logo" src="obrazky/logo22.png" alt="logo Peknataska.cz" width=25%>
 
-        <img src="obrazky/pozadi2.jpg" alt="pozadi" width=200px>
+                E-mail: info@peknataska.cz <br>
+                Telefon: +420 602 131 575
+            </header>
 
-        <!-- Hlavička stránky -->
 
-        <!-- sekce produkty -->
-        <div id="app">
 
-            <button v-on:click="ukazPrvniOtazku" v-if="filtr===null  && sadaOtazek===false"> POTŘEBUJI
-                PORADIT</button>
-            <br>
-            <div v-on:click="prepniOtazku" v-if="sadaOtazek==='prvni'">
-                <p>Vyber si, z jaké látky by sis nejpravděpodobněji koupil/a kabát:</p>
-                <button data-sada="prvni" data-body=0> obrazek1 </button>
-                <button data-sada="prvni" data-body=1> obrazek2 </button>
-                <button data-sada="prvni" data-body=2> obrazek3 </button>
+            <div class="obrazek">
+            </div>
+            <div class="popisek">
+                Jsem Světlana a ráda šiju. Můžete si se mnou vylepšit svůj šatník.
+                Tady je více informaní <a href="#omne">o mně</a>.
             </div>
 
-            <div v-on:click="prepniOtazku" v-if="sadaOtazek==='druha'">
-                <p>Vyber si, z jaké látky by sis nejpravděpodobněji koupil/a kalhoty nebo sukni:</p>
-                <button data-sada="druha" data-body=0> obrazek4 </button>
-                <button data-sada="druha" data-body=1> obrazek5 </button>
-                <button data-sada="druha" data-body=2> obrazek6 </button>
-            </div>
-
-            <div v-on:click="prepniOtazku" v-if="sadaOtazek==='treti'">
-                <p>Vyber si, z jaké látky by sis nejpravděpodobněji koupil/a košili, svetr nebo halenku:</p>
-                <button data-sada="treti" data-body=0> obrazek7 </button>
-                <button data-sada="treti" data-body=1> obrazek8 </button>
-                <button data-sada="treti" data-body=2> obrazek9 </button>
-            </div>
-            <br>
 
 
-            <div v-if="filtr==='a'">
-                Typ A
+            <!-- sekce produkty -->
+            <div class="container">
+
+
+                <button v-on:click="ukazPrvniOtazku" v-if="filtr===null  && sadaOtazek===false"> POTŘEBUJI
+                    PORADIT</button>
                 <br>
+                <div v-on:click="prepniOtazku" v-if="sadaOtazek==='prvni'">
+                    <p>Vyber si, z jaké látky by sis nejpravděpodobněji koupil/a kabát:</p>
+                    <button data-sada="prvni" data-body=0> obrazek1 </button>
+                    <button data-sada="prvni" data-body=1> obrazek2 </button>
+                    <button data-sada="prvni" data-body=2> obrazek3 </button>
+                </div>
+
+                <div v-on:click="prepniOtazku" v-if="sadaOtazek==='druha'">
+                    <p>Vyber si, z jaké látky by sis nejpravděpodobněji koupil/a kalhoty nebo sukni:</p>
+                    <button data-sada="druha" data-body=0> obrazek4 </button>
+                    <button data-sada="druha" data-body=1> obrazek5 </button>
+                    <button data-sada="druha" data-body=2> obrazek6 </button>
+                </div>
+
+                <div v-on:click="prepniOtazku" v-if="sadaOtazek==='treti'">
+                    <p>Vyber si, z jaké látky by sis nejpravděpodobněji koupil/a košili, svetr nebo halenku:</p>
+                    <button data-sada="treti" data-body=0> obrazek7 </button>
+                    <button data-sada="treti" data-body=1> obrazek8 </button>
+                    <button data-sada="treti" data-body=2> obrazek9 </button>
+                </div>
                 <br>
-                Vy jste poměrně konzervativní typ, Vašemu typu nejvíce odpovídá
-                méně výrazný styl oblékání, jednobarevnost v oblékání, univerzální barvy, které
-                lze kombinovat mezi sebou i s jinými barvami.
-                Jako základ je Váš styl velmi dobrý, právě kvůli možnosti univerzálního
-                použití. Pro zvýšení elegance a zvýraznění Vám doporučuji nebát se
-                výraznějších doplňků.
-                <div class=""></div>
-                <div class=""></div>
-                <img class="A" src="obrazky/A_Konzervativni.png" alt="fotoA" width="250px">
-
-                <img class="A" src="obrazky/A_Konzervativni_lepe.png" alt="fotoB" width="198px">
-                <img class="A" src="obrazky/B.png" alt="fotoB" width="125px">
-            </div>
-
-            <div v-if="filtr==='b'"><br>
-            </div>
-
-            <div v-if="filtr==='c'"><br>
-
-                tady je nějaký text
-            </div>
-
-            <br>
-            <button v-on:click="zrusitFiltr" v-if="filtr">Zruš {{filtr}} filtr</button>
 
 
+                <div v-if="filtr==='a'">
+                    Typ A
+                    <br>
+                    <br>
+                    Vy jste poměrně konzervativní typ, Vašemu typu nejvíce odpovídá
+                    méně výrazný styl oblékání, jednobarevnost v oblékání, univerzální barvy, které
+                    lze kombinovat mezi sebou i s jinými barvami.
+                    Jako základ je Váš styl velmi dobrý, právě kvůli možnosti univerzálního
+                    použití. Pro zvýšení elegance a zvýraznění Vám doporučuji nebát se
+                    výraznějších doplňků.
+                    <div class=""></div>
+                    <div class=""></div>
+                    <img class="A" src="obrazky/A_Konzervativni.png" alt="fotoA" width="250px">
 
-            <div class="souhrn">
-                <div class="druh" v-for="(druh, index) in filtrovaneVyrobky" v-on:click="ukazDetail(index)">
+                    <img class="A" src="obrazky/A_Konzervativni_lepe.png" alt="fotoB" width="198px">
+                    <img class="A" src="obrazky/B.png" alt="fotoB" width="125px">
+                </div>
 
-                    <div class="nazev"> {{druh.nazev}} + {{druh.foto}} </div>
-                    <img class="logo" v-bind:src="`obrazky/${druh.foto}`" alt="foto" width="100px">
+                <div v-if="filtr==='b'"><br>
+                </div>
 
+                <div v-if="filtr==='c'"><br>
+
+                    tady je nějaký text
+                </div>
+
+                <br>
+                <button v-on:click="zrusitFiltr" v-if="filtr">Zruš {{filtr}} filtr</button>
+
+
+
+                <div class="souhrn">
+                    <div class="druh" v-for="(druh, index) in filtrovaneVyrobky" v-on:click="ukazDetail(index)">
+
+                        <div class="nazev"> {{druh.nazev}} + {{druh.foto}} </div>
+                        <img class="logo" v-bind:src="`obrazky/${druh.foto}`" alt="foto" width="100px">
+
+                    </div>
                 </div>
             </div>
 
         </div>
 
-        <!--Patička -->
 
-        <footer class="footer">
-            <p>
-                Světlana Habrdová © 2020
+        <!-- Seke O mně -->
+
+<button v-on:click="rozbalInfo">Chceš se dozvědět více o mě? </button>
+        <div :class="{animujRozbaleni:zobrazSekci}" id="omne" class="omne">
+            
+
+            <h2 data-nazev="omne"> </h2>
+            <img class="omne" src="obrazky/stroj.jpg" class="mr-3 mb-3" alt="stroj">
+            <img class="mojefoto" src="obrazky/foto1.jpg" alt="mojefoto">
+
+
+            <p class="omneText">
+                Už jako malá jsem ráda a často kreslila postavy v šatech, ještě bych asi někde našla 2
+                sešity plné
+                skic
+                dámských šatů,
+                které jsem navrhovala ve věku kolem 10 let.
+                Mimo to sem háčkovala, pletla a vyšívala, k čemuž mě vedla moje babička, ale při těchto
+                ručních
+                pracech
+                to nějak strašně pomalu
+                přibývalo a tak jsem se začala zajímat i o šití. <br>
+                <br>
+                Jak šel čas, nějak mě semlel pracovní proces a kreativní tvorba šla stranou s myšlenkou,
+                že uměním a textilní tvorbou, bych se neuživila. <br>
+                <br>
+                K šití jsem se skutečně dostala až kolem 25 let, kdy jsem dostala k narozeninám hobby levný
+                šicí
+                stroj z
+                Polska.
+                Na něm jsem dělala hokusy pokusy v takové míře, že do roka šel do šrotu, ale hodně toho ušil
+                :). Pro
+                jistotu jsem si další šicí stroj koupila rovnou průmyslový.
+                <br>
+                <br>
+                Šila jsem všechno možné – tašky, kabelky, textilní košíky a postupně oblečení, obvykle byly
+                modely
+                při
+                první zkoušce dost
+                nekoukatelné, takový pocit mívám vlastně při první zkoušce dodnes.
+                Postupně jsem se zlepšovala a taky se věnovala úpravě oděvů. <br>
+                <br>
+                Od roku 2012 jsem začala navštěvovat různé kurzy - zaměřené na znalost látek, tvorbu střihů,
+                vypracování
+                jednodušších a postupně složitějších oděvů, také jsem chodila na lekce k profesionálním
+                švadlenám.
+                <br>
+                <br>
+
+                Momentálně neustále něco šiju, testuju, zlepšuju, spravuju, vyvíjím a ráda bych Vám nabídla
+                část své práce a kreativity ať už ve formě mých hand made výrobků nebo teba oprava Vašeho
+                oblíbeného oblečení
+                a nebo ušití oděvu na míru. <br>
+                V tuto chvíli šiju pro zákazníky nejčastěji nákupní látkové tašky, kabelky, klíčenky,
+                organizéry do kabelky, sáčky na boty a šáčky do bot proti zápachu. <br>
+
             </p>
+        </div>
+    </div>
 
-        </footer>
+    <!--Patička -->
+
+    <footer class="footer">
+        <p>
+            Světlana Habrdová © 2020
+        </p>
+
+    </footer>
 
     </div>
-   
+
     <script src="index.js"></script>
 </body>
 

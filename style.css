@@ -1,30 +1,63 @@
 /*---------------------obecné ---------------*/
 body{
-    font-family: 'Nunito Sans', sans-serif; 
+    font-family: 'Nunito Sans', sans-serif;
     font-weight: 100;
     color: black;
     }
 
-    .celkovaStranka{
-        margin-left: 100px;
-        margin-right: 15%;
-    }
-
 h2{
-    margin-left: 8%;  
+    margin-left: 8%;
     color: gray;
+}
+.bile {
+  background-color: white;
+}
+body {
+  background-color: #d4eba6;
+}
+.celkovaStranka {
+  margin-left: 100px;
+  margin-right: 15%;
+  background-color: white;
+}
+.popisek {
+  position: absolute;
+  font-size: 40px;
+  top: 45%;
+  left: 50%;
+  color: #466804;
+  text-align: center;
+  font-weight: bold;
+  transform: translate(-50%, -50%);
+}
+.obrazek {
+  background-image: url("obrazky/pozadi3.jpg");
+  height: 400px;
+  background-size: cover;
+  filter: blur(2px) grayscale();
+  opacity: .4;
+  position: relative;
+  box-shadow: 0 0 8px 8px white;
+  background-position: center;
 }
 
 /*---------------- MENU ---------------*/
 .hlavicka {
-    border-bottom: 2px solid greenyellow;
+    /* border-bottom: 2px solid greenyellow; */
     font-weight: 400;
     font-weight: bolder;
     text-align: right;
     margin-bottom: 0;
     margin-top: 0;
-  
+    margin-left: 100px;
+        margin-right: 15%;
+
     overflow: hidden;
+   }
+
+   #app {
+     margin-left: 100px;
+        margin-right: 15%;
    }
 
 /*.hlavicka logo{
@@ -32,39 +65,35 @@ h2{
     top: 0;
    text-align: left;
 }*/
+#omne {
+  transition: all 2s;
+  opacity: 0;
+}
+#omne.animujZobrazeni {
+  opacity: 1; 
+}
 
-
-/*---------------------sekce OBECNĚ ---------------*/
-section{
- 
+/*---------------------sekce o mě ---------------*/
+.omneText{
+padding-left: 50px;
     padding: 0 15%;
     color: gray;
    }
 
+   .omne {
+     width: 30%;
+     display: inline
+     margin-left: auto;
+     margin-right: auto;
+    }
 
-/*---------------------sekce o mě ---------------*/
-.omne {
-   background: linear-gradient(0deg, #ccff66 0%, rgba(0,0,0,0) 100%);
- /* padding: 15%;*/
-  color: grey
-  }
-
-.omne h2{
-margin-right: 50px;
-text-align: center;
-}
-
-.omne p{
-margin-left: 50px;
-  }
-
-.omne img{
-    width: 30%;
-    display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
+    .mojefoto {
+    width: 10%;
+     display: inline;
+     margin-left: auto;
+     margin-right: auto;
+    }
+    
 /*---------------------sekce výrobky ---------------*/
 
 /*---------------------sekce fotogalerie ---------------*/
