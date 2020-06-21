@@ -54,6 +54,8 @@ new Vue({
     ],
     sadaOtazek: false,
 
+    zobrazSekci: false,
+
     soucet: 0,
   },
 
@@ -62,7 +64,7 @@ new Vue({
       this.vybranyProdukt = index;
     },
 
-        zrusitFiltr() {
+    zrusitFiltr() {
       this.filtr = null
     },
 
@@ -92,13 +94,17 @@ new Vue({
         ("treti" === prichazimZeSady) {
         this.sadaOtazek = false
         this.soucet += parseInt(ukazBody)
-        
-        if (this.soucet >=5) { this.filtr='c'}
-        else if (this.soucet <= 1) { this.filtr='a'}
-        else { this.filtr='b'}
+
+        if (this.soucet >= 5) { this.filtr = 'c' }
+        else if (this.soucet <= 1) { this.filtr = 'a' }
+        else { this.filtr = 'b' }
       }
-
-
     },
+
+    rozbalInfo() {
+      this.zobrazSekci = !this.zobrazSekci
+      console.log("funguje toto vůbec? ")
+    },
+
   }
 });
