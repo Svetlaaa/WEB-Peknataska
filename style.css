@@ -3,152 +3,187 @@ body{
     font-family: 'Nunito Sans', sans-serif;
     font-weight: 100;
     color: black;
-    }
+    background-color: #d4eba6;
+    color: darkslategray;
+}
 
-h2{
-    margin-left: 8%;
-    color: gray;
-}
-.bile {
-  background-color: white;
-}
-body {
-  background-color: #d4eba6;
-}
 .celkovaStranka {
-  margin-left: 100px;
-  margin-right: 15%;
-  background-color: white;
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;
 }
-.popisek {
+
+.obrazek {
+    position: relative;
+    background-image: url("obrazky/profilovka.png");
+    height: 300px;
+    background-size: cover;
+    filter: blur(1px) grayscale();
+    opacity: .3;
+    position: relative;
+    background-position: center;
+}
+
+.wrapper {
+  position: relative;
+
+}
+.text {
   position: absolute;
+  color: #457052;
   font-size: 40px;
-  top: 45%;
-  left: 50%;
-  color: #466804;
   text-align: center;
   font-weight: bold;
-  transform: translate(-50%, -50%);
-}
-.obrazek {
-  background-image: url("obrazky/pozadi3.jpg");
-  height: 400px;
-  background-size: cover;
-  filter: blur(2px) grayscale();
-  opacity: .4;
-  position: relative;
-  box-shadow: 0 0 8px 8px white;
-  background-position: center;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-right: 40%;
+  padding: 30px;
 }
 
-.kontejner{
-  display: flex;
-  justify-content: center;
- /* margin-left: 5px;
-  align-content: space-between;*/
-  width: 150px;
+.logo{
+  padding-right: 700px;
+  margin-top:50px;
+  width:30%;
+  margin-bottom:0;
+  }
+
+.vedleTextu {
+  position: absolute;
+  color: #457052;
+  font-weight: bold;
+  top: 50%;
+  left: 60%;
+  transform: translate(10%, -50%);
 }
 
-.A{
-}
 /*---------------- MENU ---------------*/
 .hlavicka {
     /* border-bottom: 2px solid greenyellow; */
     font-weight: 400;
     font-weight: bolder;
     text-align: right;
-    margin-bottom: 0;
-    margin-top: 0;
+    margin-bottom: 20px;
+    margin-top: -50px;
     margin-left: 100px;
-        margin-right: 15%;
-
+    margin-right: 15%;
     overflow: hidden;
-   }
+   /* position: relative;*/
+  }
 
-   #app {
-     margin-left: 100px;
-        margin-right: 15%;
-   }
-
-/*.hlavicka logo{
-    width: 20%;
-    top: 0;
-   text-align: left;
-}*/
-#omne {
-  transition: all 2s;
-  opacity: 0;
+.fade-enter-active, .fade-leave-active {
+  transition: all .3s ease;
 }
-#omne.animujZobrazeni {
-  opacity: 1; 
+.fade-enter, .fade-leave-to {
+  /* transform: translateY(-50px); */
+  /* opacity: 0; */
+  transform: scale(0);
 }
 
+.sipka {border-left: 20px solid #da3f94; left: 10px}
+
+/*------------Výrbky----------------------------*/
+.seznamVyrobku {
+  flex-flow: row-reverse wrap;  
+}
+
+.nazev{
+  margin-left: 15% ;
+}
+
+.druh img{
+  margin-top:0px;
+  margin-left:15px;
+}
+
+.nadpis{
+text-align:center;
+}
+
+.text1{
+  padding-left: 15px;
+}
 /*---------------------sekce o mě ---------------*/
 .omneText{
-padding-left: 50px;
+    padding-left: 50px;
     padding: 0 15%;
-    color: gray;
-   }
-
-   .omne {
-     width: 30%;
-     display: inline
-     margin-left: auto;
-     margin-right: auto;
-    }
-
-    .mojefoto {
-    width: 10%;
-     display: inline;
-     margin-left: auto;
-     margin-right: auto;
-    }
-    
-/*---------------------sekce výrobky ---------------*/
-
-/*---------------------sekce fotogalerie ---------------*/
-
-/*---------------------sekce Blog ---------------*/
-
-
-/*---------------------sekce kontakt ---------------*/
-.kontakt{
-margin-left: 10%;
-   }
-
-.h2 kontakt{
-    /*\margin-left: 50%;  /*neví proč to tady nereaguje,jdu spt*/
-}
-
-.kontejner {
- display: flex;
- /*justify-content: space-between;*/
 }
 
 .mojefoto {
-    width: 40%;
+     width: 100px;
+   /* margin-left: auto;*/
     border-radius: 20%;
-/*    margin-right: 80px;  */
+    margin-left:250px;
+      }
+
+      .stroj{
+    border-radius: 20%;
+
+      }
+.container{
+   padding-left: 15px;
 }
 
-.kontaktniinfo{
-margin-left: -5%;
-font-weight: 600;
-font-size: 20px;
+/*---------------------sekce kontakt ---------------*/
+/*.kontakt{
+margin-left: 10%;
+   }*/
+
+
+button {
+    background-color: #457052;
+    color: #fff;
+    border-radius: .5em;
+    border: 0;
+    padding: 1em;
+    transition: all .2s;
+}
+button:hover {
+    background-color: #BECA6C;
+}
+button.big {
+    font-size: 2em;
+    padding: 1em;
 }
 
 
-/*---------------- patička ---------------*/
-footer{
-border: 2px solid whitesmoke;
-text-align: center;
-background-color: #f5f5f5;
-color: #88cc00;
-width: 850px;
-margin-left: 200px;
-font-weight: bold;
- }
-
- .nadpis {
-font-weight: bold;
- }
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+  }
+/* The Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+/*----------patička -----*/
+.footer{
+  text-align: center;
+  font-weight: 600;
+  font-size: large;
+  color: #457052;
+}

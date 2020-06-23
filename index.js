@@ -51,6 +51,42 @@ new Vue({
         typ: ["b"],
         foto: `rouska1.png`
       },
+      {
+        nazev: `kabelka`,
+        text: `C`,
+        typ: ["c"],
+        foto: `kabelkaC.jpg`
+      },
+      {
+        nazev: `nakupni taska`,
+        text: `AB`,
+        typ: ["a", "b"],
+        foto: `nakupkaA_B.jpg`
+      },
+      {
+        nazev: `nakupni taska`,
+        text: `C`,
+        typ: ["c"],
+        foto: `nakupkaC.jpg`
+      },
+      {
+        nazev: `obal na knihu`,
+        text: `a`,
+        typ: ["A"],
+        foto: `knihaA.jpg`
+      },
+        {nazev: `nakupni taska`,
+         text: `A+B`,
+        typ: ["a", "b"],
+        foto: `taskaA_B.jpg`
+      },
+      {
+        nazev: `obal na knihu`,
+        text: `B`,
+        typ: ["b"],
+        foto: `KnihaB.jpg`
+      },
+
     ],
     sadaOtazek: false,
 
