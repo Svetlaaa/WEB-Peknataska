@@ -41,6 +41,16 @@ body {
   background-position: center;
 }
 
+.kontejner{
+  display: flex;
+  justify-content: center;
+ /* margin-left: 5px;
+  align-content: space-between;*/
+  width: 150px;
+}
+
+.A{
+}
 /*---------------- MENU ---------------*/
 .hlavicka {
     /* border-bottom: 2px solid greenyellow; */
