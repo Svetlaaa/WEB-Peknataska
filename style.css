@@ -98,18 +98,38 @@ body{
   display: block;
 }
 
+.A:hover, .A:focus, .A:active,
+.B:hover, .B:focus, .B:active,
+.C:hover, .C:focus ,.C:active{
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+   width: 35%;
+}
+
 /*------------Výrbky----------------------------*/
 .seznamVyrobku {
   flex-flow: row-reverse wrap;  
+  margin-top: 30px;
+}
+
+.druh{
 }
 
 .nazev{
+  display: flex;
   margin-left: 15% ;
 }
 
 .vyrobek{
-  width: 35%;
-}
+  margin-left: 15px;
+width: 35%;
+margin-bottom: 20px;
+ /*flex:wrap;*/
+ justify-content: center;
+ align-items: center;
+ flex:50%;
+ }
 
 .druh img{
   margin-top:0px;
@@ -134,7 +154,7 @@ text-align:center;
      width: 100px;
    /* margin-left: auto;*/
     border-radius: 20%;
-    margin-left:250px;
+   /* margin-left:250px;*/
       }
 
       .stroj{
@@ -146,15 +166,13 @@ text-align:center;
 }
 
 /*---------------------sekce kontakt ---------------*/
-/*.kontakt{
-margin-left: 10%;
-   }*/
+
 .sipka{
   border-right:10px solid #da3f94;
   border-top: 10px solid #da3f94;
   border-left: 0;
   position: absolute;
- top:-145px;
+  top:-145px;
   left:-45px;
   width: 50px;
   height: 50px;

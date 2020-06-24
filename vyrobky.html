@@ -37,7 +37,7 @@
             <div class="wrapper">
                 <div class="obrazek"></div>
                 <div class="text">
-                    Ahoj, jsem Světlana a mám ráda styl a eleganci. <br> 
+                    Ahoj, jsem Světlana a mám ráda styl a eleganci. <br>
                     Můžete si se mnou vylepšit svůj šatník!
                 </div>
 
@@ -82,7 +82,7 @@
 
                 </div>
 
-               
+
 
                 <div v-if="filtr==='a'">
                     <h2>Typ A: Konzervativní</h2>
@@ -96,14 +96,14 @@
                     barevných doplňků.<br><br>
                     <div class="fotosA">
 
-                        <img class="A" src="obrazky/A_Konzervativni.png" alt="fotoA" width="255px">
+                        <img class="vyhodnoceniA" src="obrazky/A_Konzervativni.png" alt="fotoA" width="255px">
                         <span class="konecObrazku">
                             <!--sipka-->
                             <div class="sipka"></div>
                         </span>
 
-                        <img class="A1" src="obrazky/A_Konzervativni_lepe.png" alt="fotoB" width="198px">
-                        <img class="A1" src="obrazky/B.png" alt="fotoB" width="125px">
+                        <img class="vyhodnoceniA1" src="obrazky/A_Konzervativni_lepe.png" alt="fotoB" width="198px">
+                        <img class="vyhodnoceniA1" src="obrazky/B.png" alt="fotoB" width="125px">
                     </div>
                     <h3> Zde je pár příkladů doplňků, které mohou podtrhnou Váš styl / barevnost: </h3>
                 </div>
@@ -117,19 +117,19 @@
                     Jste na tom dobře, jen tak dál :) <br>
                     <br>
                     <div class="fotoB">
-                    <img class="B" src="obrazky/A_Konzervativni_lepe.png" alt="fotoB" width="205">
-                    <img class="B" src="obrazky/B_puvodni.jpg" alt="fotoB" width="290px">
+                        <img class="vyhodnoceniB" src="obrazky/A_Konzervativni_lepe.png" alt="fotoB" width="205">
+                        <img class="vyhodnoceniB" src="obrazky/B_puvodni.png" alt="fotoB" width="180px">
 
-                    <span class="konecObrazku">
-                        <!--sipka-->
-                        <div class="sipka"></div>
-                    </span>
+                        <span class="konecObrazku">
+                            <!--sipka-->
+                            <div class="sipka"></div>
+                        </span>
 
-                    <img class="B" src="obrazky/B_lepe.png" alt="fotoB" width="123px">
-                    <img class="B" src="obrazky/B_OK.png" alt="fotoB" width="90px">
-                
-                </div>
-                <h3> Zde je pár příkladů doplňků, které mohou podtrhnou Váš styl / barevnost: </h3>
+                        <img class="vyhodnoceniB" src="obrazky/B_lepe.png" alt="fotoB" width="123px">
+                        <img class="vyhodnoceniB" src="obrazky/B_OK.png" alt="fotoB" width="90px">
+
+                    </div>
+                    <h3> Zde je pár příkladů doplňků, které mohou podtrhnou Váš styl / barevnost: </h3>
 
                 </div>
 
@@ -145,26 +145,26 @@
                     <br><br>
                     Pro zvýšení elegance doporučuji spíše umírněnost.<br>
                     <div class="">
-                 <img class="C" src="obrazky/C_puv3.png" alt="fotoC" width="150px">
-                    <img class="C" src="obrazky/C_puv2.png" alt="fotoC" width="93px">
+                        <img class="vyhodnoceniC" src="obrazky/C_puv3.png" alt="fotoC" width="150px">
+                        <img class="vyhodnoceniC" src="obrazky/C_puv2.png" alt="fotoC" width="93px">
 
-                    <span class="konecObrazku">
-                        <!--sipka-->
-                        <div class="sipka"></div>
-                    </span>
+                        <span class="konecObrazku">
+                            <!--sipka-->
+                            <div class="sipka"></div>
+                        </span>
 
-                    <img class="C" src="obrazky/C_puvodni.png" alt="fotoC" width="190px">
-                    <img class="C" src="obrazky/C_new.png" alt="fotoC" width="172px">
+                        <img class="vyhodnoceniC" src="obrazky/C_puvodni.png" alt="fotoC" width="190px">
+                        <img class="vyhodnoceniC" src="obrazky/C_new.png" alt="fotoC" width="172px">
 
+                    </div>
+
+                    <h3>Zde je pár příkladů doplňků, které mohou podtrhnou Váš styl / barevnost: </h3>
                 </div>
-            
-                <h3>Zde je pár příkladů doplňků, které mohou podtrhnou Váš styl / barevnost: </h3>
-            </div>
 
                 <button v-on:click="zrusitFiltr" v-if="filtr">Zruš filtr {{filtr}} </button>
 
                 <div class="seznamVyrobku">
-                    
+
                     <div class="druh" v-for="(druh, index) in filtrovaneVyrobky" v-on:click="ukazDetail(index)">
                         <div class="nazev"> {{druh.nazev}} </div>
                         <img class="vyrobek" v-bind:src="`obrazky/${druh.foto}`" alt="foto" width="100px">
@@ -240,7 +240,7 @@
             </transition>
         </div>
         <footer class="footer">
-            <p>
+            <p class="foot">
                 Světlana Habrdová © 2020
             </p>
 
