@@ -27,7 +27,7 @@
             <header class="hlavicka">
                 <img class="logo" src="obrazky/logo22.png" alt="logo Peknataska.cz" width=25%>
 
-                <button class="buton" v-on:click="zobrazSekci = !zobrazSekci">O mně</button> <br>
+                <button class="button1" v-on:click="zobrazSekci = !zobrazSekci">O mně</button> <br>
                 E-mail: info@peknataska.cz <br>
                 Telefon: +420 602 131 575 <br>
             </header>
@@ -37,7 +37,8 @@
             <div class="wrapper">
                 <div class="obrazek"></div>
                 <div class="text">
-                    Ahoj, jsem Světlana a mám ráda módu. Můžete si se mnou vylepšit svůj šatník.
+                    Ahoj, jsem Světlana a mám ráda styl a eleganci. <br> 
+                    Můžete si se mnou vylepšit svůj šatník!
                 </div>
 
                 <div class="vedleTextu">
@@ -52,111 +53,121 @@
             <div class="container">
 
                 <div v-on:click="prepniOtazku" v-if="sadaOtazek==='prvni'">
-                <h2 class="nadpis"> T E S T </h2>
+                    <h2 class="nadpis"> T E S T </h2>
                     <p class="text1">
-                    Díky výsledu testu můžeš zjisti víc o Tvém šatníku, jaké máš barevné
-                     preference a dozvědět se možná pár tipů, které Ti mohou 
-                     pomoci vylepšit Tvůj styl. <br> <br>
-                    Tak hurá do toho :) mám na Tebe jen 3 otázky:<br>
-                    <br>
-                    1. Vyber si, z jaké látky by sis nejpravděpodobněji koupil/a kabát:</p>
-                    <button data-sada="prvni" data-body=0> 
-                    <img class="A" src="obrazky/1A.png" alt="fotoA" width="198px">
-                     </button>
-                    
-                    <button data-sada="prvni" data-body=1> 
-                     <img class="B" src="obrazky/1B.png" alt="fotoB" width="210px">
-                    </button>
-                
-                    <button data-sada="prvni" data-body=2> 
-                    <img class="C" src="obrazky/1C.png" alt="fotoC" width="220px">
-                    </button>
+                        Díky výsledu testu můžeš zjisti víc o Tvém šatníku, jaké máš barevné
+                        preference a dozvědět se možná pár tipů, které Ti mohou
+                        pomoci vylepšit Tvůj styl. <br> <br>
+                        Tak hurá do toho :) mám na Tebe jen 3 otázky:<br>
+                        <br>
+                        1. Vyber si, z jaké látky by sis nejpravděpodobněji koupil/a kabát:</p>
+                    <img class="A" data-sada="prvni" data-body=0 src="obrazky/1A.png" alt="fotoA" width="203 px">
+                    <img class="B" data-sada="prvni" data-body=1 src="obrazky/1B.png" alt="fotoB" width="210px">
+                    <img class="C" data-sada="prvni" data-body=2 src="obrazky/1C.png" alt="fotoC" width="220px">
+
                 </div>
 
                 <div v-on:click="prepniOtazku" v-if="sadaOtazek==='druha'">
                     <p>Vyber si, z jaké látky by sis nejpravděpodobněji koupil/a kalhoty nebo sukni:</p>
-                    <button data-sada="druha" data-body=0> obrazek4 </button>
-                    <button data-sada="druha" data-body=1> obrazek5 </button>
-                    <button data-sada="druha" data-body=2> obrazek6 </button>
+                    <img class="A" data-sada="druha" data-body=0 src="obrazky/2A.png" alt="fotoA2" width="220px">
+                    <img class="B" data-sada="druha" data-body=1 src="obrazky/2B.png" alt="fotoB2" width="220px">
+                    <img class="C" data-sada="druha" data-body=2 src="obrazky/2C.png" alt="fotoC2" width="206px">
                 </div>
 
                 <div v-on:click="prepniOtazku" v-if="sadaOtazek==='treti'">
                     <p>Vyber si, z jaké látky by sis nejpravděpodobněji koupil/a košili, svetr nebo halenku:</p>
-                    <button data-sada="treti" data-body=0> obrazek7 </button>
-                    <button data-sada="treti" data-body=1> obrazek8 </button>
-                    <button data-sada="treti" data-body=2> obrazek9 </button>
+                    <img class="A" data-sada="treti" data-body=0 src="obrazky/3A.png" alt="fotoA3" width="260px">
+                    <img class="B" data-sada="treti" data-body=1 src="obrazky/3B.png" alt="fotoB3" width="220px">
+                    <img class="C" data-sada="treti" data-body=2 src="obrazky/3C.png" alt="fotoC3" width="165px">
+
                 </div>
+
+               
 
                 <div v-if="filtr==='a'">
-                  <h2>Typ A: Konzervativní</h2>
+                    <h2>Typ A: Konzervativní</h2>
                     Vy jste poměrně konzervativní typ, Vašemu typu nejvíce odpovídá
                     méně výrazný styl oblékání, často jednobarevnost v oblékání, univerzální barvy, které
-                    lze kombinovat mezi sebou i s jinými barvami.
-                    Jako základ je Váš styl velmi dobrý, právě díky možnostem barevně 
+                    lze kombinovat mezi sebou i s jinými barvami.<br>
+                    Jako základ je Váš styl velmi dobrý, právě díky možnostem barevně
                     kombinovat. Na takovém stylu se skvěle staví elegantnější a stylovější kombinace
-                    přidámím výraznějí barvy. <br>
-                     Pro zvýšení elegance a zvýraznění Vám doporučuji nebát se
-                    výraznějších doplňků.
-                    <div class=""></div>
-                    <div class=""></div>
-                    <img class="A" src="obrazky/A_Konzervativni.png" alt="fotoA" width="250px">
+                    přidámím výraznějí barvy. <br> <br>
+                    Pro zvýšení elegance a zvýraznění Vám doporučuji nebát se
+                    výraznějších doplňků.<br><br>
+                    <div class="fotosA">
 
-            <!--sipka-->
+                        <img class="A" src="obrazky/A_Konzervativni.png" alt="fotoA" width="255px">
+                        <span class="konecObrazku">
+                            <!--sipka-->
+                            <div class="sipka"></div>
+                        </span>
 
-
-                    <img class="A" src="obrazky/A_Konzervativni_lepe.png" alt="fotoB" width="198px">
-                    <img class="A" src="obrazky/B.png" alt="fotoB" width="125px">
+                        <img class="A1" src="obrazky/A_Konzervativni_lepe.png" alt="fotoB" width="198px">
+                        <img class="A1" src="obrazky/B.png" alt="fotoB" width="125px">
+                    </div>
+                    <h3> Zde je pár příkladů doplňků, které mohou podtrhnou Váš styl / barevnost: </h3>
                 </div>
-
                 <div v-if="filtr==='b'">
-                 <h2>Typ B: Vyvážený</h2>
-                  Nebojíte se výrazných barev, ale také to s nimi nepřeháníte, je pro Vás 
-                  typická vyváženost. Pravděpodiobně máte cit pro kombinace a nehrozí
-                  Vám přehnanost na úkor elegance. 
-                  Váš styl je prostě skvělý základ se kterým umíte lépe či hůře
-                  pracovat. Pro inspiraci je zde fotka jak Váš styl vylepšit. 
-                  Jste na tom dobře, jen tak dál :) <br>
-                     
-                    <div class=""></div>
-                    <div class=""></div>
-                  
-                    <img class="B" src="obrazky/A_Konzervativni_lepe.png" alt="fotoB" width="198px">
+                    <h2>Typ B: Vyvážený</h2>
+                    Nebojíte se výrazných barev, ale také to s nimi nepřeháníte, je pro Vás
+                    typická vyváženost. Pravděpodiobně máte cit pro kombinace a nehrozí
+                    Vám přehnanost na úkor elegance.
+                    Váš styl je prostě skvělý základ se kterým umíte lépe či hůře
+                    pracovat. Pro inspiraci je zde fotka jak Váš styl vylepšit.<br>
+                    Jste na tom dobře, jen tak dál :) <br>
+                    <br>
+                    <div class="fotoB">
+                    <img class="B" src="obrazky/A_Konzervativni_lepe.png" alt="fotoB" width="205">
+                    <img class="B" src="obrazky/B_puvodni.jpg" alt="fotoB" width="290px">
 
-            <!--sipka-->
-                    
-                    <img class="B" src="obrazky/B_lepe.png" alt="fotoB" width="125px">
+                    <span class="konecObrazku">
+                        <!--sipka-->
+                        <div class="sipka"></div>
+                    </span>
+
+                    <img class="B" src="obrazky/B_lepe.png" alt="fotoB" width="123px">
+                    <img class="B" src="obrazky/B_OK.png" alt="fotoB" width="90px">
                 
+                </div>
+                <h3> Zde je pár příkladů doplňků, které mohou podtrhnou Váš styl / barevnost: </h3>
+
                 </div>
 
                 <div v-if="filtr==='c'">
-                   <h2>Typ C: Veselý</h2>
-                  Nebojíte se vůbec výrazných barev ani netypických kombinací, 
-                  ale občas je těch barev a vzorů dohromady možná víc, než byste i chtěli, 
-                  což k sobě nemusí nakonec až tak ladit.  
-                  Možná byste rádi našli více rovnováhy v kombinování oděvů a doplnků.                   Vám přehnanost na úkor elegance. 
-                  Na všem je možné pracovat, jestli s tím chcete pomoci, buidu ráda, 
-                  když mě kontaktujete. 
-                   <br>
-                     Pro zvýšení elegance doporučuji spíše umírněnost. 
-                    <div class=""></div>
-                    <div class=""></div>
-                  
-                    <img class="C" src="obrazky/C_puv3.png" alt="fotoC" width="198px">
-                    <img class="C" src="obrazky/C_puv2.png" alt="fotoC" width="198px">
+                    <h2>Typ C: Veselý</h2>
+                    Nebojíte se vůbec výrazných barev ani netypických kombinací,
+                    ale občas je těch barev a vzorů dohromady možná víc, než byste i chtěli,
+                    což k sobě nemusí nakonec až tak ladit.
+                    Možná byste rádi našli více rovnováhy v kombinování oděvů a doplnků. Vám přehnanost na úkor
+                    elegance.<br><br>
+                    Na všem je možné pracovat, jestli s tím chcete pomoci, buidu ráda,
+                    když mě kontaktujete.
+                    <br><br>
+                    Pro zvýšení elegance doporučuji spíše umírněnost.<br>
+                    <div class="">
+                 <img class="C" src="obrazky/C_puv3.png" alt="fotoC" width="150px">
+                    <img class="C" src="obrazky/C_puv2.png" alt="fotoC" width="93px">
 
-            <!--sipka-->
-                    
-                    <img class="C" src="obrazky/C_puvodni.png" alt="fotoC" width="125px">
-                    <img class="C" src="obrazky/C_new.png" alt="fotoC" width="125px">
-                
+                    <span class="konecObrazku">
+                        <!--sipka-->
+                        <div class="sipka"></div>
+                    </span>
+
+                    <img class="C" src="obrazky/C_puvodni.png" alt="fotoC" width="190px">
+                    <img class="C" src="obrazky/C_new.png" alt="fotoC" width="172px">
+
                 </div>
+            
+                <h3>Zde je pár příkladů doplňků, které mohou podtrhnou Váš styl / barevnost: </h3>
+            </div>
 
-                <button v-on:click="zrusitFiltr" v-if="filtr">Zruš {{filtr}} filtr</button>
+                <button v-on:click="zrusitFiltr" v-if="filtr">Zruš filtr {{filtr}} </button>
 
                 <div class="seznamVyrobku">
+                    
                     <div class="druh" v-for="(druh, index) in filtrovaneVyrobky" v-on:click="ukazDetail(index)">
-                        <div class="nazev"> {{druh.nazev}}  </div>
-                        <img class="logo" v-bind:src="`obrazky/${druh.foto}`" alt="foto" width="100px">
+                        <div class="nazev"> {{druh.nazev}} </div>
+                        <img class="vyrobek" v-bind:src="`obrazky/${druh.foto}`" alt="foto" width="100px">
                     </div>
                 </div>
             </div>
@@ -166,65 +177,65 @@
         <!-- Sekce O mně -->
         <div class="modal" :style="{display: zobrazSekci ? 'block' : 'none'}">
             <transition name="fade">
-                <div v-if="zobrazSekci"  class="modal-content">
-                  <span class="close" @click="zobrazSekci = false">&times;</span>
-                  <img class="mojefoto" src="obrazky/foto1.jpg" alt="mojefoto" width="100px">
- <img class="stroj" src="obrazky/stroj.jpg" alt="stroj" width="100px">
+                <div v-if="zobrazSekci" class="modal-content">
+                    <span class="close" @click="zobrazSekci = false">&times;</span>
+                    <img class="mojefoto" src="obrazky/foto1.jpg" alt="mojefoto" width="100px">
+                    <img class="stroj" src="obrazky/stroj.jpg" alt="stroj" width="100px">
 
-                  <p class="omneText">
-                      Už jako malá jsem ráda a často kreslila postavy v šatech, 
-                      ještě bych asi někde našla 2 sešity plné
-                      skic
-                      dámských šatů,
-                      které jsem navrhovala ve věku kolem 10 let. <br> <br>
-                      Mimo to jsem háčkovala, pletla a vyšívala, k čemuž mě vedla moje babička, ale při těchto
-                      ručních
-                      pracech
-                      to nějak strašně pomalu
-                      přibývalo a tak jsem se začala zajímat i o šití.<br><br>
-                      Jak šel čas, nějak mě semlel pracovní proces a kreativní tvorba šla stranou s myšlenkou,
-                      že uměním a textilní tvorbou, bych se neuživila.<br><br>
-                      K šití jsem se vrátila až kolem 25 let, kdy jsem dostala k narozeninám hobby levný
-                      šicí
-                      stroj z
-                      Polska.
-                      Na něm jsem dělala hokusy pokusy v takové míře, že do roka šel do šrotu, ale hodně toho ušil
-                      :). Pro
-                      jistotu jsem si další šicí stroj koupila rovnou průmyslový.<br><br>
-                      Šila jsem všechno možné – tašky, kabelky, textilní košíky a postupně oblečení, obvykle byly
-                      modely
-                      při
-                      první zkoušce dost
-                      nekoukatelné, takový pocit mívám vlastně při první zkoušce dodnes. <br><br>
-                      Postupně jsem se zlepšovala a taky se věnovala úpravě oděvů.
-                      Od roku 2012 jsem začala navštěvovat různé kurzy - zaměřené na znalost látek, tvorbu střihů,
-                      vypracování
-                      jednodušších a postupně složitějších oděvů, také jsem chodila na lekce k profesionálním
-                      švadlenám. <br><br>
+                    <p class="omneText">
+                        Už jako malá jsem ráda a často kreslila postavy v šatech,
+                        ještě bych asi někde našla 2 sešity plné
+                        skic
+                        dámských šatů,
+                        které jsem navrhovala ve věku kolem 10 let. <br> <br>
+                        Mimo to jsem háčkovala, pletla a vyšívala, k čemuž mě vedla moje babička, ale při těchto
+                        ručních
+                        pracech
+                        to nějak strašně pomalu
+                        přibývalo a tak jsem se začala zajímat i o šití.<br><br>
+                        Jak šel čas, nějak mě semlel pracovní proces a kreativní tvorba šla stranou s myšlenkou,
+                        že uměním a textilní tvorbou, bych se neuživila.<br><br>
+                        K šití jsem se vrátila až kolem 25 let, kdy jsem dostala k narozeninám hobby levný
+                        šicí
+                        stroj z
+                        Polska.
+                        Na něm jsem dělala hokusy pokusy v takové míře, že do roka šel do šrotu, ale hodně toho ušil
+                        :). Pro
+                        jistotu jsem si další šicí stroj koupila rovnou průmyslový.<br><br>
+                        Šila jsem všechno možné – tašky, kabelky, textilní košíky a postupně oblečení, obvykle byly
+                        modely
+                        při
+                        první zkoušce dost
+                        nekoukatelné, takový pocit mívám vlastně při první zkoušce dodnes. <br><br>
+                        Postupně jsem se zlepšovala a taky se věnovala úpravě oděvů.
+                        Od roku 2012 jsem začala navštěvovat různé kurzy - zaměřené na znalost látek, tvorbu střihů,
+                        vypracování
+                        jednodušších a postupně složitějších oděvů, také jsem chodila na lekce k profesionálním
+                        švadlenám. <br><br>
 
-                      Díky šití jsem načerpala hodně znalostí o stylu, barvách, o tom, 
-                      co komu sluší, jak zdůraznit v šatech přednosti a skrýt
-                      nedostatky, což jsem si vždy vyzkoušela na sobě. 
-                      Takže Vám mohu pomoci zlepšit Váš styl, cítit se dobře s vědomím, 
-                      že víte, že vypadáte skvěle tak, jak nejlépe můžete, protože Váš
-                      oděv Vám prostě sedí.<br><br>
+                        Díky šití jsem načerpala hodně znalostí o stylu, barvách, o tom,
+                        co komu sluší, jak zdůraznit v šatech přednosti a skrýt
+                        nedostatky, což jsem si vždy vyzkoušela na sobě.
+                        Takže Vám mohu pomoci zlepšit Váš styl, cítit se dobře s vědomím,
+                        že víte, že vypadáte skvěle tak, jak nejlépe můžete, protože Váš
+                        oděv Vám prostě sedí.<br><br>
 
-                      Momentálně neustále něco šiju, testuji, zlepšuji, spravuji, vyvíjím a občas šiju na
-                      zakázku pro oděvní dílny a pro známé. <br><br>
+                        Momentálně neustále něco šiju, testuji, zlepšuji, spravuji, vyvíjím a občas šiju na
+                        zakázku pro oděvní dílny a pro známé. <br><br>
 
-                      Ráda bych Vám nabídla svoje poradenství, také si u mě můžete objednat
-                      některý z mých "hand made"
-                       doplňků nebo mohu opravy, případně upravit Váš
-                      oblíbený oděv anebo ušít oděv na míru.
-                      <br><br>
-                      V tuto chvíli šiju na zakázku nejčastěji doplňky viz. 
-                      fotky výše - zejména nákupní látkové tašky, kabelky, klíčenky,
-                      organizéry do kabelky, sáčky na boty a šáčky do bot s aktivním uhlím, 
-                      ale dá se domluvit na něčem individuálně.
-<br><br>
-                      Budu ráda, když se mi ozvete :). <br>
-                      Přeji Vám pěkný den. 
-                  </p>
+                        Ráda bych Vám nabídla svoje poradenství, také si u mě můžete objednat
+                        některý z mých "hand made"
+                        doplňků nebo mohu opravy, případně upravit Váš
+                        oblíbený oděv anebo ušít oděv na míru.
+                        <br><br>
+                        V tuto chvíli šiju na zakázku nejčastěji doplňky viz.
+                        fotky výše - zejména nákupní látkové tašky, kabelky, klíčenky,
+                        organizéry do kabelky, sáčky na boty a šáčky do bot s aktivním uhlím,
+                        ale dá se domluvit na něčem individuálně.
+                        <br><br>
+                        Budu ráda, když se mi ozvete :). <br>
+                        Přeji Vám pěkný den.
+                    </p>
                 </div>
             </transition>
         </div>
@@ -232,9 +243,10 @@
             <p>
                 Světlana Habrdová © 2020
             </p>
-    
+
         </footer>
     </div>
     <script src="index.js"></script>
 </body>
+
 </html>
