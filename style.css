@@ -43,10 +43,13 @@ body{
 }
 
 .logo{
-  padding-right: 700px;
-  margin-top:50px;
-  width:30%;
+ /* padding-right: 700px;
+  margin-top:50px;*/
+  width:32%;
+  left: 18%;
+  top:0
   margin-bottom:0;
+  position: absolute;
   }
 
 .vedleTextu {
@@ -60,19 +63,19 @@ body{
 
 /*---------------- MENU ---------------*/
 .hlavicka {
-    /* border-bottom: 2px solid greenyellow; */
-    font-weight: 400;
+   font-weight: 400;
     font-weight: bolder;
     text-align: right;
-    margin-bottom: 20px;
-    margin-top: -50px;
+    margin-bottom: 100px;
+   margin-top: 5px;
     margin-left: 100px;
     margin-right: 15%;
     overflow: hidden;
-  /* position: relative;*/
+  /position: relative;
   }
 
 .button1{
+  margin-top: 30px;
   justify-content: right;
 }
 
@@ -111,29 +114,29 @@ body{
 .seznamVyrobku {
   flex-flow: row-reverse wrap;  
   margin-top: 30px;
+  display: flex;
 }
 
 .druh{
+  width: 45%;
+  margin-right: 10px;
 }
 
 .nazev{
   display: flex;
-  margin-left: 15% ;
+  /*margin-left: 5% ;*/
 }
 
 .vyrobek{
-  margin-left: 15px;
-width: 35%;
-margin-bottom: 20px;
+width: 90%;
+margin-bottom: 30px;
  /*flex:wrap;*/
  justify-content: center;
  align-items: center;
- flex:50%;
- }
+  }
 
 .druh img{
   margin-top:0px;
-  margin-left:15px;
 }
 
 .nadpis{
